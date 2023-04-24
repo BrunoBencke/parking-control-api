@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "efa5e04f-38b3-4e26-a94e-11f774f6d354",
+		"name": "Parking Spot Control",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5528643",
+		"_collection_link": "https://intercompi.postman.co/workspace/Team-Workspace~3bb58286-c301-4706-8daf-af831ade4d50/collection/5528643-efa5e04f-38b3-4e26-a94e-11f774f6d354?action=share&creator=5528643&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "POST Parking Spot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"parkingSpotNumber\": \"2058\",\r\n    \"licensePlateCar\": \"RRS8562\",\r\n    \"brandCar\": \"audi\",\r\n    \"modelCar\": \"q5\",\r\n    \"colorCar\": \"black\",\r\n    \"responsibleName\": \"Bruno Bencke\",\r\n    \"apartment\": \"205\",\r\n    \"block\": \"B\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/parking-spot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parking-spot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Parking Spot Copy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"parkingSpotNumber\": \"2058\",\r\n    \"licensePlateCar\": \"RRS8562\",\r\n    \"brandCar\": \"audi\",\r\n    \"modelCar\": \"q5\",\r\n    \"colorCar\": \"green\",\r\n    \"responsibleName\": \"Bruno Bencke\",\r\n    \"apartment\": \"205\",\r\n    \"block\": \"B\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/parking-spot/14139d74-49f6-405b-a92c-a9f92f1f7d4e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parking-spot",
+						"14139d74-49f6-405b-a92c-a9f92f1f7d4e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Parking Spot",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/parking-spot?page=1&size=1&sort=registrationDate,ASC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parking-spot"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "1"
+						},
+						{
+							"key": "sort",
+							"value": "registrationDate,ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET By ID Parking Spot",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/parking-spot/3582cb58-9fba-4e23-991c-5c15701d3220",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parking-spot",
+						"3582cb58-9fba-4e23-991c-5c15701d3220"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE By ID Parking Spot",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/parking-spot/3582cb58-9fba-4e23-991c-5c15701d3220",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parking-spot",
+						"3582cb58-9fba-4e23-991c-5c15701d3220"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
