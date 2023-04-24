@@ -12,7 +12,7 @@ public class ParkingControlApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ParkingControlApplication.class, args);
 	}
-	@GetMapping("/healt")
+	@GetMapping("/health")
 	public String index(){
 		return "Running";
 	}
